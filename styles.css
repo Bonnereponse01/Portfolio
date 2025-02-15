@@ -1,0 +1,194 @@
+:root {
+    font-size: 10px; /* 1rem = 10px */
+    --barlow: "Barlow", serif;
+    --barlow-thin-weight: 100;
+    --barlow-thin-style: normal;
+    --barlow-extralight-weight: 200;
+    --barlow-extralight-style: normal;
+    --barlow-light-weight: 300;
+    --barlow-light-style: normal;
+    --barlow-regular-weight: 400;
+    --barlow-regular-style: normal;
+    --barlow-medium-weight: 500;
+    --barlow-medium-style: normal;
+    --barlow-semibold-weight: 600;
+    --barlow-semibold-style: normal;
+    --barlow-bold-weight: 700;
+    --barlow-bold-style: normal;
+    --barlow-extrabold-weight: 800;
+    --barlow-extrabold-style: normal;
+    --barlow-black-weight: 900;
+    --barlow-black-style: normal;
+    --barlow-thin-italic-style: italic;
+    --barlow-extralight-italic-weight: 200;
+    --barlow-light-italic-weight: 300;
+    --barlow-regular-italic-weight: 400;
+    --barlow-medium-italic-weight: 500;
+    --barlow-semibold-italic-weight: 600;
+    --barlow-bold-italic-weight: 700;
+    --barlow-extrabold-italic-weight: 800;
+    --barlow-black-italic-weight: 900;
+    --max-width: 120rem; /* Définir la largeur maximale commune */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #cfc1b8;
+    font-family: var(--barlow);
+    font-weight: var(--barlow-regular-weight);
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+    position: relative; /* Add this line */
+}
+
+.header-full-height {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0; /* Add this line to remove outer margin */
+}
+
+.header-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding:0;
+}
+
+nav {
+    font-size: 3.6rem;
+    position: absolute; /* Add this line */
+    bottom: 0; /* Add this line */
+    width: 100%; /* Add this line */
+    max-width: var(--max-width);
+    margin: 0 auto;
+    left: 50%; /* Add this line */
+    transform: translateX(-50%); /* Add this line */
+}
+
+.nav-style {
+    display: flex;
+    align-items: center;
+    padding-top:7.1rem;
+    bottom:auto;
+    top :7.2rem;
+}
+
+.nav-style ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-style ul li {
+    margin-right: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-block: 0; /* Add this line to remove margin-block */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Change color to black */
+    font-family: var(--barlow);
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background-color: #000;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a::before {
+    top: -0.5rem;
+    transform: translateY(0);
+}
+
+nav ul li a::after {
+    bottom: -0.5rem;
+    transform: translateY(0);
+}
+
+nav ul li a:hover::before {
+    transform: translateY(-0.3rem);
+}
+
+nav ul li a:hover::after {
+    transform: translateY(0.3rem);
+}
+
+nav ul li a:hover {
+    text-decoration: none; /* Remove native underline on hover */
+}
+
+section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 9rem;
+    font-weight: var(--barlow-bold-weight);
+}
+
+.center-title {
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a {
+    font-family: var(--barlow);
+    font-weight: var(--barlow-semibold-weight);
+}
+
+.images__section {
+    margin: 21rem auto;
+    max-width: var(--max-width);
+    position:relative;
+}
+
+.image__list {
+    list-style-type:none;
+}
+
+.image-list__item {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.image-list__item img {
+    max-width:100%;
+    margin-bottom:21rem;
+}
